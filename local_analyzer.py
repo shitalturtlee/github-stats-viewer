@@ -101,6 +101,7 @@ def analyze_repo(owner, repo):
             top_changed_files=most_changed_files(path),
             largest_files=largest_files(path),
             todo_count=count_todos(path),
+            commits=commits,
         )
     finally:
         cleanup(path)

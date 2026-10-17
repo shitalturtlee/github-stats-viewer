@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from typing import Any
 
 
 @dataclass
@@ -11,3 +12,4 @@ class RepoAnalysis:
     top_changed_files: list = field(default_factory=list)
     largest_files: list = field(default_factory=list)
     todo_count: int = 0
+    commits: Any = None  # pandas DataFrame: author, date, message
